@@ -12,7 +12,6 @@ export default function Header(){
             <NavLink to='/' style={(sty)=> sty.isActive ? myStyle : null } className="font-bold text-xl">#VANLIFE</NavLink>
             <div className="flex gap-4 items-center">
             <NavLink to="/host" style={({isActive})=> isActive ? myStyle : null } >Host</NavLink>
-            <NavLink to="/starwar" style={({isActive})=> isActive ? myStyle : null } >StarWar</NavLink>
             <NavLink to="/vans" style={({isActive})=> isActive ? myStyle : null } >Vans</NavLink>
             <NavLink to="/about" style={({isActive})=> isActive ? myStyle : null } >About</NavLink>
             </div>

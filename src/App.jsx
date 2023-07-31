@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/VanLife/Home";
 import About from "./pages/VanLife/About";
-import StarWar from './pages/StarWar'
 import Van from "./pages/VanLife/Van";
 import VanDetails from "./pages/VanLife/VanDetail";
 import Layout from './components/Layout'
@@ -25,7 +24,6 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Van />} />
-          <Route path="starwar" element={<StarWar />} />
           <Route path="vans/:name" element={<VanDetails />} />
 
           <Route path="host" element={<Host/>} >
