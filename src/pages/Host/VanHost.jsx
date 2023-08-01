@@ -10,7 +10,7 @@ export default function VanHost(){
     }, [])
     const vanElement = vans.map(van =>{
         return(
-            <Link to={`/host/vans/${van.name}`} key={van.id} className="flex items-center gap-2 bg-amber-100">
+            <Link to={van.name} key={van.id} className="flex items-center gap-2 bg-amber-100">
                 <img src={van.imageUrl} alt={van.name} className="w-52 " />
                 <div className="grid gap-2">
                     <h1 className="text-2xl font-bold">{van.name}</h1>
