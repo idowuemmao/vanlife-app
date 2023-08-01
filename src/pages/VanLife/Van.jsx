@@ -33,7 +33,7 @@ export default function Van() {
   const myStyle = {backgroundColor}
   
     return (
-        <Link to={van.name} key={van.id} state={{search: `?${searchParams.toString()}`}} className="grid grid-cols-2 gap-2 ">
+        <Link to={van.name} key={van.id} state={{search: `?${searchParams.toString()}`, type: typeFilter}} className="grid grid-cols-2 gap-2 ">
           <img src={van.imageUrl} alt={van.name} className="h-56 w-full grid col-span-2 border-2 border-black shadow-lg" />
           <h1 className="font-semibold text-sm">{van.name}</h1>
           <p className="text-sm grid place-items-end items-center">${van.price}/day</p>
