@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import VanData from './VanData'
-import { Link, NavLink, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 export default function Van() {
   const [vans, setVans] = useState([{}])
@@ -11,7 +11,6 @@ export default function Van() {
   //  .then(data => console.log(data))
     setVans(VanData)
   },[])
-
   
   const [searchParams, setSearchParams] = useSearchParams()
   const vanTypeFilter = searchParams.get('type')
@@ -34,7 +33,7 @@ export default function Van() {
   const myStyle = {backgroundColor}
   
     return (
-        <Link to={van.name} key={van.id} className="grid grid-cols-2 gap-2 ">
+        <Link to={van.name} key={van.id} state={{search: `?${searchParams.toString()}`}} className="grid grid-cols-2 gap-2 ">
           <img src={van.imageUrl} alt={van.name} className="h-56 w-full grid col-span-2 border-2 border-black shadow-lg" />
           <h1 className="font-semibold text-sm">{van.name}</h1>
           <p className="text-sm grid place-items-end items-center">${van.price}/day</p>
