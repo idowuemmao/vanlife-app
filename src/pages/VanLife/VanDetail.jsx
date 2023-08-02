@@ -35,13 +35,13 @@ return(
     (van ? (
     <div className="w-full overflow-auto">
       <div className="p-8 grid gap-6">
-          <Link to={`..${search}`} relative="path" className="text-2xl font-bold" >&larr; Back to {type} vans </Link>
+          <Link to={`..${search}`} relative="path" className=" text-sm sm:text-2xl lg:text-4xl font-bold" >&larr; Back to {type} vans </Link>
           <img src={van.imageUrl} alt={van.name} className="w-full border-2 border-black shadow-lg h-fit mt-4"/>
-          <button className="py-1 rounded text-white text-sm capitalize w-2/5" style={myStyle}>{van.type}</button>
-          <h1 className="font-bold text-3xl">{van.name}</h1>
-          <p className="text-sm "><b>${van.price}</b>/day</p>
+          <button className="py-1 rounded text-white text-sm md:text-2xl capitalize w-2/5 text-center" style={myStyle}>{van.type}</button>
+          <h1 className="font-bold text-3xl md:text-5xl">{van.name}</h1>
+          <p className="text-sm md:text-2xl "><b>${van.price}</b>/day</p> 
           <p className="text-justify">{van.description}</p>
-          <button className="py-1 rounded text-white bg-blue-950 text-base capitalize w-2/5">Rate this van</button>
+          <button className="py-1 rounded text-white md:text-2xl bg-blue-950 text-base capitalize ">Rate this van</button>
       </div>
     </div>
     ) : <h1 className="text-2xl m-12">Loading....</h1>)

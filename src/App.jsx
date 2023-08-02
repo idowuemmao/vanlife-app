@@ -14,6 +14,7 @@ import Pricing from "./pages/Host/Pricing";
 import Details from "./pages/Host/Details";
 import VanHost from "./pages/Host/VanHost";
 import VanHostDetails from "./pages/Host/VanHostDetails";
+import PageNotFound from "./pages/PageNotFound";
 import "./index.css";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               <Route path="photos" element={<Photos/>}/>
             </Route>
           </Route>
+          <Route path="*" element={<PageNotFound/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

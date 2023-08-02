@@ -4,10 +4,12 @@ import Header from "./Header";
 import Footer from "./Footer";
 export default function Layout(){
     return (
-    <div className="w-full mx-4 flex items-center justify-center h-full bg-white ">
-        <div className="flex flex-col items-center justify-center w-11/12 border-4 h-screen">
+    <div className="w-screen flex items-center justify-center h-fit bg-white ">
+        <div className="flex flex-col items-center justify-center border-4 ">
             <Header/>
-            <Outlet/>
+            <div className="h-full w-screen">
+                <Outlet/>
+            </div>
             <Footer/>
         </div>
     </div>

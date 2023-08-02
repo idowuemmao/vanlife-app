@@ -13,7 +13,7 @@ export default function VanHost(){
             <Link to={van.name} key={van.id} className="flex items-center gap-2 bg-amber-100">
                 <img src={van.imageUrl} alt={van.name} className="w-52 " />
                 <div className="grid gap-2">
-                    <h1 className="text-2xl font-bold">{van.name}</h1>
+                    <h1 className="text-lg sm:text-3xl md:text-4xl font-bold">{van.name}</h1>
                     <p className="text-xl ">${van.price}/day</p>
                 </div>
             </Link>

@@ -9,7 +9,7 @@ export default function Layout(){
         color: 'gold'
     }  
     return (
-    <div className="w-full h-screen overflow-clip">
+    <div className="w-full h-[80vh] overflow-auto">
         <nav className="flex justify-around bg-black text-white p-1">
             <NavLink style={({isActive})=> isActive ? myStyle : null} to="." end>Dashboard</NavLink>
             <NavLink style={({isActive}) => isActive ? myStyle : null} to="income">Income</NavLink>
