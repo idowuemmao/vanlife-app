@@ -1,0 +1,1 @@
+This is a Van renting site to enable people rent out camper vans for their next road trip adventure.
