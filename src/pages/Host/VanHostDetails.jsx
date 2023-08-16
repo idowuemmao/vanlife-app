@@ -28,8 +28,8 @@ export default function VanHostDetails(){
     }
     
     return (
-        <div className="grid gap-8 m-2 p-6 overflow-auto">
-            <Link to='..' relative="path" className="text-lg font-semibold ">&larr; Back to all Host vans</Link>
+        <div className="grid gap-8 p-6 overflow-auto">
+            <Link to='..' relative="path" className="text-lg font-semibold mt-8">&larr; Back to all Host vans</Link>
             <div className="grid items-center gap-3 sm:grid-cols-2 w-full">
                 <img src={van.imageUrl} alt={van.name} className="w-full" />
                 <div className="grid gap-8">

@@ -6,15 +6,15 @@ export default function Layout(){
     const myStyle = {
         fontWeight: "bold",
         textDecoration : 'underline',
-        color: 'gold'
+        color: 'gold',
     }  
     return (
-    <div className="w-full h-[80vh] overflow-auto">
-        <nav className="flex justify-around bg-black text-white p-1">
-            <NavLink style={({isActive})=> isActive ? myStyle : null} to="." end>Dashboard</NavLink>
-            <NavLink style={({isActive}) => isActive ? myStyle : null} to="income">Income</NavLink>
-            <NavLink style={(sty) => sty.isActive ? myStyle : null} to="vans">Vans</NavLink>
-            <NavLink style={(sty) => sty.isActive ? myStyle : null} to="reviews">Review</NavLink>
+    <div className="w-full ">
+        <nav className="flex justify-around bg-gray-900 text-white p-2 fixed top-auto w-full ">
+            <NavLink className='hover:underline' style={({isActive})=> isActive ? myStyle : null} to="." end>Dashboard</NavLink>
+            <NavLink className='hover:underline' style={({isActive}) => isActive ? myStyle : null} to="income">Income</NavLink>
+            <NavLink className='hover:underline' style={(sty) => sty.isActive ? myStyle : null} to="vans">Vans</NavLink>
+            <NavLink className='hover:underline' style={(sty) => sty.isActive ? myStyle : null} to="reviews">Review</NavLink>
         </nav>
         <Outlet/>
     </div>
