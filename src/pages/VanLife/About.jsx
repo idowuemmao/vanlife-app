@@ -9,8 +9,8 @@ export default function About(){
         )
     })
     return(
-        <div className="overflow-auto h-full w-full">
-            <div className="flex w-4/5 gap-8 my-10 mx-auto py-2 overflow-scroll scrollbar-hide "> 
+        <div className="overflow-auto h-full w-full grid gap-2">
+            <div className="flex w-4/5 gap-8 mx-auto py-2 rounded-3xl overflow-scroll scrollbar-hide "> 
                 {vanElement}
             </div>
             <div className="p-6">

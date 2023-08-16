@@ -8,7 +8,7 @@ export default function Header(){
         color: 'red'
     }
     return(
-        <nav className="flex w-screen p-4 justify-between bg-slate-200 text-black font-medium">
+        <nav className="flex w-full p-4 justify-between bg-slate-200 text-black font-medium">
             <NavLink to='/' style={(sty)=> sty.isActive ? myStyle : null } className="font-bold text-xl">#VANLIFE</NavLink>
             <div className="flex gap-4 items-center">
             <NavLink to="/host" style={({isActive})=> isActive ? myStyle : null } >Host</NavLink>

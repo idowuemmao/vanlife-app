@@ -27,7 +27,7 @@ export default function VanDetails(){
     }
     const myStyle = {backgroundColor}
 
-    //Optional Channing
+    //Optional Chaining
     const search = location.state?.search || ""
     const type = location.state?.type || "all"
  
