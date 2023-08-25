@@ -66,12 +66,12 @@ export default function Van() {
 return (
   <div className="w-full p-8 grid gap-4 overflow-auto">
     <h1 className="font-bold text-3xl ">Explore our Van options</h1>
-    <div className="flex gap-6">
+    {/* <div className="flex gap-6">
       <button onClick={()=> handleFilterChange('type', 'simple')}  className={`p-1 text-black border-2 px-4  rounded-md ${typeFilter ==='simple' ? 'bg-orange-700': null}`}>Simple</button>
       <button onClick={()=> handleFilterChange('type', 'rugged')} className={`p-1 text-black border-2 px-4 rounded- ${typeFilter ==='rugged' ? 'bg-green-500' : null}`}>Rugged</button>
       <button onClick={()=> handleFilterChange('type', 'luxury')} className={`p-1 text-black border-2 px-4 rounded-md ${typeFilter ==='luxury' ? 'bg-black text-white' : null}`}>Luxury</button>
       {typeFilter? (<button onClick={()=> handleFilterChange('type', null)} className="p-1 text-black border-2 px-4 rounded-md" >Clear</button>) : null}    
-    </div>
+    </div> */}
     <div className="flex gap-6"> 
       <Link to={genNewSearchParamString('type', 'simple')}  className={`p-1 text-black border-2 px-4  rounded-md ${typeFilter ==='simple' ? 'bg-orange-700': null}`}>Simple</Link>
       <Link to={genNewSearchParamString('type', 'rugged')} className={`p-1 text-black border-2 px-4 rounded-md ${typeFilter ==='rugged' ? 'bg-green-500' : null}`}>Rugged</Link>

@@ -23,7 +23,6 @@ export default function VanHost(){
         <div className="grid gap-4 w-full h-full overflow-scroll scrollbar-hide ">
             <h1 className="text-4xl font-bold mt-8">Your listed vans</h1>
             {vans.length > 0 ? vanElement : <h2>Loading van...</h2>}
-
         </div>
     )
 }
