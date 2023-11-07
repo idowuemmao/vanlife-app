@@ -50,7 +50,7 @@ export default function Home() {
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-delay="300"
-        data-aos-duration="2000"
+        data-aos-duration="100"
         className="flex w-full items-center justify-center"
       >
         <img src={homeImage2} alt="intro" className="h-fit w-3/4 " />
