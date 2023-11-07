@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .link {
+    @apply p-1 text-white border-2 px-4 rounded-md;
+  }
+}

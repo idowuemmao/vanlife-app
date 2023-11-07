@@ -5,8 +5,8 @@ import homeImage2 from "../../images/bus2.jpg";
 
 export default function Home() {
   return (
-    <div className="bg-slate-900 text-white w-full h-full p-10">
-      <h1 className="text-4xl font-bold p-4 text-white lg:text-left text-center">
+    <div className="bg-primary text-neutralf w-full h-full p-10">
+      <h1 className="text-4xl font-bold p-4 text-neutralf lg:text-left text-center">
         You got the travel plans, we got the travel vans.
       </h1>
       <div className="flex w-full items-center justify-center">
@@ -71,7 +71,7 @@ export default function Home() {
         to="/vans"
         data-aos="fade-up"
         data-aos-duration="1000"
-        className="bg-rose-400 p-2 flex justify-center m-8 text-white text-xl font-bold hover:bg-white hover:text-rose-400 transition-all ease-in-out duration-3000"
+        className="bg-rose-400 p-2 flex justify-center m-8 text-neutralf text-xl font-bold hover:bg-neutralf hover:text-rose-400 transition-all ease-in-out duration-3000"
       >
         Find Your Van
       </Link>

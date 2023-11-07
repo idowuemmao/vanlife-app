@@ -24,12 +24,13 @@ export default function Van() {
   const VanElement = displayedVan.map((van) => {
     let backgroundColor;
     if (van.type === "simple") {
-      backgroundColor = "darkorange";
+      backgroundColor = "#008000";
     } else if (van.type === "rugged") {
-      backgroundColor = "green";
+      backgroundColor = "#ff8c00";
     } else if (van.type === "luxury") {
-      backgroundColor = "black";
+      backgroundColor = "#C20C27";
     }
+
     const myStyle = { backgroundColor };
 
     return (
@@ -37,19 +38,19 @@ export default function Van() {
         to={van.name}
         key={van.id}
         state={{ search: `?${searchParams.toString()}`, type: typeFilter }}
-        className="grid grid-cols-2 gap-2 hover:scale-105 transition duration-200 ease-out hover:opacity-90"
+        className="grid grid-cols-2 gap-2 hover:scale-105 transition duration-200 ease-out text-neutral hover:opacity-90"
       >
         <img
           src={van.imageUrl}
           alt={van.name}
-          className="h-56 w-full grid col-span-2 border-2 border-black shadow-lg rounded-2xl"
+          className="h-fit max-h-48 w-full grid col-span-2 border-2 border-black shadow-lg rounded-2xl"
         />
         <h1 className="font-semibold text-sm">{van.name}</h1>
         <p className="text-sm grid place-items-end items-center">
           ${van.price}/day
         </p>
         <button
-          className="py-1 rounded text-white text-sm capitalize"
+          className="py-1 rounded text-neutral text-sm capitalize"
           style={myStyle}
         >
           {van.type}
@@ -79,39 +80,33 @@ export default function Van() {
   }
 
   return (
-    <div className="w-full p-8 grid gap-4">
-      <h1 className="font-bold text-3xl ">Explore our Van options</h1>
-
-      <div className="flex gap-6">
+    <div className="w-full h-full p-8 bg-primary grid gap-8">
+      <h1 className="font-bold text-xl md:text-3xl text-neutral">
+        Explore our Van options
+      </h1>
+      <div className="flex flex-wrap gap-2 text-xs sm:text-xl md:text-lg">
         <Link
           to={genNewSearchParamString("type", "simple")}
-          className={`p-1 text-black border-2 px-4  rounded-md ${
-            typeFilter === "simple" ? "bg-orange-700" : null
-          }`}
+          className={`link ${typeFilter === "simple" ? "bg-simple" : null}`}
         >
           Simple
         </Link>
         <Link
           to={genNewSearchParamString("type", "rugged")}
-          className={`p-1 text-black border-2 px-4 rounded-md ${
-            typeFilter === "rugged" ? "bg-green-500" : null
-          }`}
+          className={`link ${typeFilter === "rugged" ? "bg-rugged" : null}`}
         >
           Rugged
         </Link>
         <Link
           to={genNewSearchParamString("type", "luxury")}
-          className={`p-1 text-black border-2 px-4 rounded-md ${
-            typeFilter === "luxury" ? "bg-black text-white" : null
+          className={`link ${
+            typeFilter === "luxury" ? "bg-luxury text-neutral" : null
           }`}
         >
           Luxury
         </Link>
         {typeFilter ? (
-          <Link
-            to={genNewSearchParamString("type", null)}
-            className="p-1 text-black border-2 px-4 rounded-md"
-          >
+          <Link to={genNewSearchParamString("type", null)} className="link">
             Clear
           </Link>
         ) : null}
@@ -123,16 +118,14 @@ export default function Van() {
   );
 }
 
-// <NavLink to='?type=simple'  className="p-1 text-white bg-red-500  rounded-md ">Simple</NavLink>
-//       <NavLink to='?type=rugged' className="p-1 text-white bg-red-500 rounded-md ">Rugged</NavLink>
-//       <NavLink to='?type=luxury' className="p-1 text-white bg-red-500 rounded-md ">Luxury</NavLink>
-//       <NavLink to='.' className="p-1 text-white rounded-md bg-red-500 ">Clear</NavLink>
+// <NavLink to='?type=simple'  className="p-1 text-neutral bg-red-500  rounded-md ">Simple</NavLink>
+//       <NavLink to='?type=rugged' className="p-1 text-neutral bg-red-500 rounded-md ">Rugged</NavLink>
+//       <NavLink to='?type=luxury' className="p-1 text-neutral bg-red-500 rounded-md ">Luxury</NavLink>
+//       <NavLink to='.' className="p-1 text-neutral rounded-md bg-red-500 ">Clear</NavLink>
 
-{
-  /* <div className="flex gap-6">
-      <button onClick={()=> handleFilterChange('type', 'simple')}  className={`p-1 text-black border-2 px-4  rounded-md ${typeFilter ==='simple' ? 'bg-orange-700': null}`}>Simple</button>
+/* <div className="flex gap-6">
+      <button onClick={()=> handleFilterChange('type', 'simple')}  className={`link ${typeFilter ==='simple' ? 'bg-orange-700': null}`}>Simple</button>
       <button onClick={()=> handleFilterChange('type', 'rugged')} className={`p-1 text-black border-2 px-4 rounded- ${typeFilter ==='rugged' ? 'bg-green-500' : null}`}>Rugged</button>
-      <button onClick={()=> handleFilterChange('type', 'luxury')} className={`p-1 text-black border-2 px-4 rounded-md ${typeFilter ==='luxury' ? 'bg-black text-white' : null}`}>Luxury</button>
+      <button onClick={()=> handleFilterChange('type', 'luxury')} className={`p-1 text-black border-2 px-4 rounded-md ${typeFilter ==='luxury' ? 'bg-black text-neutral' : null}`}>Luxury</button>
       {typeFilter? (<button onClick={()=> handleFilterChange('type', null)} className="p-1 text-black border-2 px-4 rounded-md" >Clear</button>) : null}    
     </div> */
-}
