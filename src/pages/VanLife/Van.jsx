@@ -24,9 +24,9 @@ export default function Van() {
   const VanElement = displayedVan.map((van) => {
     let backgroundColor;
     if (van.type === "simple") {
-      backgroundColor = "#008000";
+      backgroundColor = "#FF00FF";
     } else if (van.type === "rugged") {
-      backgroundColor = "#ff8c00";
+      backgroundColor = "#008000";
     } else if (van.type === "luxury") {
       backgroundColor = "#C20C27";
     }

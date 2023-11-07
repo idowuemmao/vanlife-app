@@ -6,4 +6,7 @@
   .link {
     @apply p-1 text-white border-2 px-4 rounded-md;
   }
+  .button-bg {
+    @apply bg-gradient-to-r from-head2 to-head p-2;
+  }
 }
