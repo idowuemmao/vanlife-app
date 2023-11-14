@@ -1,26 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import VanData from "./VanData";
 
 export default function VanDetails() {
-  // const [van, setVan] = useState([{}])
   const { name } = useParams();
   const van = VanData.find((van) => van.name === name);
   const location = useLocation();
 
-  // useEffect(function(){
-  //     fetch(`https://api.imgflip.com/get_memes`)
-  //   .then((response) => response.json())
-  //   .then((data) => setVan(data.data.memes));
-  //     // setVan(VanData)
-  // },[]);
   let backgroundColor;
   if (van.type === "simple") {
-    backgroundColor = "#FF00FF";
+    backgroundColor = `${backgroundColor.simple}`;
   } else if (van.type === "rugged") {
-    backgroundColor = "#008000";
+    backgroundColor = `${backgroundColor.rugged}`;
   } else if (van.type === "luxury") {
-    backgroundColor = "#C20C27";
+    backgroundColor = `${backgroundColor.luxury}`;
   }
   const myStyle = { backgroundColor };
 
