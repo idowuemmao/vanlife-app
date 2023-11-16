@@ -8,12 +8,15 @@ export default function VanDetails() {
   const location = useLocation();
 
   let backgroundColor;
+  const luxury = "#C20C27";
+  const simple = "#FF00FF";
+  const rugged = "#008000";
   if (van.type === "simple") {
-    backgroundColor = `${backgroundColor.simple}`;
+    backgroundColor = simple;
   } else if (van.type === "rugged") {
-    backgroundColor = `${backgroundColor.rugged}`;
+    backgroundColor = rugged;
   } else if (van.type === "luxury") {
-    backgroundColor = `${backgroundColor.luxury}`;
+    backgroundColor = luxury;
   }
   const myStyle = { backgroundColor };
 

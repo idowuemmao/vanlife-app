@@ -12,6 +12,11 @@ module.exports = {
         neutral: "#FFFFFF",
         primary: "#0f172a",
       },
+      backgroundColor: {
+        rugged: "#008000",
+        simple: "#FF00FF",
+        luxury: "#C20C27",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

@@ -8,15 +8,18 @@ export default function VanHostDetails() {
 
   let backgroundColor;
   let borderColor;
+  const luxury = "#C20C27";
+  const simple = "#FF00FF";
+  const rugged = "#008000";
   if (van.type === "simple") {
-    backgroundColor = `${backgroundColor.simple}`;
-    borderColor = `${backgroundColor.simple}`;
+    backgroundColor = simple;
+    borderColor = simple;
   } else if (van.type === "rugged") {
-    borderColor = `${backgroundColor.rugged}`;
-    backgroundColor = `${backgroundColor.rugged}`;
+    borderColor = rugged;
+    backgroundColor = rugged;
   } else if (van.type === "luxury") {
-    borderColor = `${backgroundColor.luxury}`;
-    backgroundColor = `${backgroundColor.luxury}`;
+    borderColor = luxury;
+    backgroundColor = luxury;
   }
   const myStyle = { backgroundColor };
   const myBorder = { borderColor };
