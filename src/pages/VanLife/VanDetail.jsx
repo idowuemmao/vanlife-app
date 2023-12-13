@@ -32,7 +32,7 @@ export default function VanDetails() {
           relative="path"
           className=" text-sm sm:text-2xl lg:text-4xl font-bold "
         >
-          &larr; Back to {type} vans{" "}
+          &larr; Back to {type} vans
         </Link>
         <img
           src={van.imageUrl}

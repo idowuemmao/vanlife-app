@@ -7,7 +7,7 @@ import homeImage2 from "../../images/bus2.jpg";
 export default function Home() {
   return (
     <div className="bg-primary text-neutral w-full h-full p-10">
-      <h1 className="text-4xl font-bold p-4 text-neutral lg:text-left text-center">
+      <h1 className="text-4xl font-bold p-4 text-neutral text-center">
         <Typewriter
           words={[
             "You got the travel Plans",

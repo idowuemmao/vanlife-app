@@ -4,11 +4,8 @@ import { Link, useSearchParams } from "react-router-dom";
 
 export default function Van() {
   const [vans, setVans] = useState([{}]);
-  // const count = 1
+
   useEffect(() => {
-    //  fetch('/api/vans')
-    //  .then(res => res.json())
-    //  .then(data => console.log(data))
     setVans(VanData);
   }, []);
 
@@ -87,20 +84,24 @@ export default function Van() {
       <div className="flex flex-wrap gap-2 text-xs sm:text-xl md:text-lg">
         <Link
           to={genNewSearchParamString("type", "simple")}
-          className={`link ${typeFilter === "simple" ? "bg-simple" : null}`}
+          className={`link hover:bg-simple ${
+            typeFilter === "simple" ? "bg-simple" : null
+          }`}
         >
           Simple
         </Link>
         <Link
           to={genNewSearchParamString("type", "rugged")}
-          className={`link ${typeFilter === "rugged" ? "bg-rugged" : null}`}
+          className={`link hover:bg-rugged ${
+            typeFilter === "rugged" ? "bg-rugged" : null
+          }`}
         >
           Rugged
         </Link>
         <Link
           to={genNewSearchParamString("type", "luxury")}
-          className={`link ${
-            typeFilter === "luxury" ? "bg-luxury text-neutral" : null
+          className={`link hover:bg-luxury ${
+            typeFilter === "luxury" ? "bg-luxury" : null
           }`}
         >
           Luxury
